@@ -1,26 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-		<groupId>com.newland</groupId>
-		<artifactId>newland-parent</artifactId>
-		<version>1.0</version>
-		<relativePath>./parent/pom.xml</relativePath>
-	</parent>
-
-	<modelVersion>1.0.0</modelVersion>
-	<groupId>com.newland</groupId>
-	<artifactId>newland-all</artifactId>
-	<name>All Application for newland</name>
-	<version>1.0</version>
-	<packaging>pom</packaging>
-	<modules>
-		<module>parent</module>
-		<module>config</module>
-		<module>web-base</module>
-		<module>interface</module>
-		<module>service</module>
-		<module>web-app</module>
-		<module>third-party-app</module>
-	</modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  	<parent>
+    	<groupId>com.newland</groupId>
+    	<artifactId>parent</artifactId>
+    	<version>1.0</version>
+     	<relativePath>../parent/pom.xml</relativePath>
+  	</parent>
+    <groupId>com.newland</groupId>
+    <artifactId>config</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.0</version>
+    <name>config</name>
+    <url>http://www.newland.com.cn</url>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>*.properties</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>

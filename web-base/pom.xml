@@ -1,26 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-		<groupId>com.newland</groupId>
-		<artifactId>newland-parent</artifactId>
-		<version>1.0</version>
-		<relativePath>./parent/pom.xml</relativePath>
-	</parent>
-
-	<modelVersion>1.0.0</modelVersion>
-	<groupId>com.newland</groupId>
-	<artifactId>newland-all</artifactId>
-	<name>All Application for newland</name>
-	<version>1.0</version>
-	<packaging>pom</packaging>
-	<modules>
-		<module>parent</module>
-		<module>config</module>
-		<module>web-base</module>
-		<module>interface</module>
-		<module>service</module>
-		<module>web-app</module>
-		<module>third-party-app</module>
-	</modules>
+<?xml version="1.0"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  	<parent>
+    	<groupId>com.newland</groupId>
+    	<artifactId>parent</artifactId>
+    	<version>1.0</version>
+     	<relativePath>../parent/pom.xml</relativePath>
+  	</parent>
+  <groupId>com.newland</groupId>
+  <artifactId>web-base</artifactId>
+  <version>1.0</version>
+  <name>Web Base for newland</name>
+  <url>http://www.newland.com.cn</url>
+    <dependencies>
+        <!--Struts2-->
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts2-convention-plugin</artifactId>
+        </dependency>
+        <!--J2ee -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jsp-api</artifactId>
+        </dependency>
+        <!-- generic library -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+        </dependency>
+    </dependencies>
 </project>

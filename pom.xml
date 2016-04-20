@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<groupId>com.newland</groupId>
-		<artifactId>newland-parent</artifactId>
+		<artifactId>parent</artifactId>
 		<version>1.0</version>
 		<relativePath>./parent/pom.xml</relativePath>
 	</parent>
