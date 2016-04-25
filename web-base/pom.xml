@@ -9,7 +9,7 @@
   	</parent>
   <groupId>com.newland</groupId>
   <artifactId>web-base</artifactId>
-  <version>1.0</version>
+  <version>1.0.0</version>
   <name>Web Base for newland</name>
   <url>http://www.newland.com.cn</url>
     <dependencies>

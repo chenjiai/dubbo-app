@@ -5,7 +5,7 @@
     	<version>1.0</version>
      	<relativePath>../parent/pom.xml</relativePath>
   	</parent>
-  	<modelVersion>1.0.0</modelVersion>
+  	<modelVersion>4.0.0</modelVersion>
   	<groupId>com.newland</groupId>
   	<artifactId>interface</artifactId>
   	<name>interface</name>

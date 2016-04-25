@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"../struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.ui.theme" value="jqueryui"/>
+    <constant name="struts.ui.templateDir" value="template"/>
+    <constant name="struts.convention.action.mapAllMatches" value="true"/>
+    <constant name="struts.convention.action.disableJarScanning" value="false" />
+    <constant name="struts.convention.action.fileProtocols" value="jar,zip" />
+    <constant name="struts.convention.action.includeJars" value=".*?/_wl_cls_gen.*jar(!/)?" />
+    <constant name="struts.convention.result.path" value="/secure"/>
+    <constant name="struts.convention.default.parent.package" value="web-default" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    <package name="web-default" extends="struts-default,json-default">    
+
+        <interceptors> 
+            <interceptor-stack name="base_stack">
+                <interceptor-ref name="exception"/>
+                <interceptor-ref name="servletConfig"/>
+                <interceptor-ref name="prepare"/>
+                <interceptor-ref name="checkbox"/>
+                <interceptor-ref name="multiselect"/>
+                <interceptor-ref name="actionMappingParams"/>
+                <interceptor-ref name="conversionError"/>
+             	<interceptor-ref name="params">
+                    <param name="excludeParams">dojo\..*,^struts\..*,^session\..*,^request\..*,^application\..*,^servlet(Request|Response)\..*,parameters\...*</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors> 
+         
+        <default-interceptor-ref name="base_stack"/>  
+        <global-results>
+            <result name="globalError">/error.jsp</result>
+        </global-results>
+    </package>
+
+</struts>

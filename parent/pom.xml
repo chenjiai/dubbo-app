@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>1.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
     <groupId>com.newland</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
@@ -146,6 +146,26 @@
     </build>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+               	<groupId>com.newland</groupId>
+			  	<artifactId>config</artifactId>
+			  	<version>1.0.0</version>
+            </dependency>
+            <dependency>
+               	<groupId>com.newland</groupId>
+			  	<artifactId>interface</artifactId>
+			  	<version>1.0.0</version>
+            </dependency>
+            <dependency>
+               	<groupId>com.newland</groupId>
+			  	<artifactId>service</artifactId>
+			  	<version>1.0.0</version>
+            </dependency>
+            <dependency>
+               	<groupId>com.newland</groupId>
+			  	<artifactId>web-base</artifactId>
+			  	<version>1.0.0</version>
+            </dependency>
 			<!-- spring begin -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -319,6 +339,11 @@
                 <artifactId>struts2-tiles-plugin</artifactId>
                 <version>${struts2.version}</version>
             </dependency>
+            <dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-spring-plugin</artifactId>
+				<version>${struts2.version}</version>
+			</dependency>
             <dependency>
                 <groupId>opensymphony</groupId>
                 <artifactId>sitemesh</artifactId>
@@ -637,18 +662,18 @@
         </plugins>
     </reporting>
     <properties>
-        <copyright.year>2010</copyright.year>
-        <spring.version>2.5.6.SEC02</spring.version>
-        <struts2.version>2.3.15.1</struts2.version>
-        <hibernate.core.version>3.3.1.GA</hibernate.core.version>
-        <hibernate.annotation.version>3.3.0.ga</hibernate.annotation.version>
-        <junit.version>4.0</junit.version>
-        <persistence.version>1.0</persistence.version>
-        <jetty.version>6.1.4</jetty.version>
-        <servlet.version>2.5</servlet.version>
-        <easymock.version>2.4</easymock.version>
-        <ohuyo.libra.version>0.1.8</ohuyo.libra.version>
-        <cxf.version>2.4.4</cxf.version>
+        <copyright.year>2016</copyright.year>
+		<spring.version>3.0.4.RELEASE</spring.version>
+		<hibernate.version>3.3.0.ga</hibernate.version>
+		<hibernate.annotation.version>3.3.0.ga</hibernate.annotation.version>
+		<struts2.version>2.3.16.1</struts2.version>
+		<junit.version>4.4</junit.version>
+		<persistence.version>1.0</persistence.version>
+		<jetty.version>6.1.4</jetty.version>
+		<servlet.version>2.5</servlet.version>
+		<easymock.version>2.4</easymock.version>
+		<spring-security.version>3.0.3.RELEASE</spring-security.version>
+		<cxf.version>2.4.4</cxf.version>
     </properties>
 
 </project>

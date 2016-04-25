@@ -8,7 +8,7 @@
 		<relativePath>./parent/pom.xml</relativePath>
 	</parent>
 
-	<modelVersion>1.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.newland</groupId>
 	<artifactId>newland-all</artifactId>
 	<name>All Application for newland</name>
